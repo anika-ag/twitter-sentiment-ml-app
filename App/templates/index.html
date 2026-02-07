@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Twitter Sentiment Analysis</h1>
+
+    <form method="POST">
+        <textarea name="tweet" rows="4" placeholder="Enter tweet text here..." required></textarea>
+        <button type="submit">Analyze Sentiment</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            Result: {{ prediction }}
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
+
